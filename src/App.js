@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Cabecalho from "./components/Cabecalho";
+import GlobalStyles from "./styles/GlobalStyles";
+import HomePage from "./Pages/HomePage";
+import SalaDeVideo from "./Pages/SalaDeVideo";
+import CadastroVideo from "./Pages/CadastroVideo";
+import { useState } from "react";
 
 function App() {
+  const [dados, setDados] = useState('');
+  
+  const addDados = novosDados => {
+    setDados([...dados, novosDados]);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <GlobalStyles/>   
+
+      <Cabecalho/>
+      
+      <Routes>
+        <Route index element={<HomePage/>}/>
+        <Route path="/salaDeVideo" element={<SalaDeVideo/>}/>
+        <Route path="/cadastro" element={<CadastroVideo  enviarDados={novosDados => addDados(novosDados)}/>}/>
+      </Routes>
+      
+    </BrowserRouter>
   );
 }
 
