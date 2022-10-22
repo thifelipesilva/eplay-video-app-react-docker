@@ -1,6 +1,6 @@
 
 
-const Video = ({ width, height, src, title }) => {
+const VideoPlayer = ({ width, height, src, title }) => {
   return (
     <iframe
       width={width}
@@ -14,4 +14,4 @@ const Video = ({ width, height, src, title }) => {
   );
 };
 
-export default Video;
+export default VideoPlayer;

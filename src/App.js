@@ -21,7 +21,7 @@ function App() {
       
       <Routes>
         <Route index element={<HomePage/>}/>
-        <Route path="/salaDeVideo" element={<SalaDeVideo/>}/>
+        <Route path="/salaDeVideo" element={<SalaDeVideo dados={dados}/>}/>
         <Route path="/cadastro" element={<CadastroVideo  enviarDados={novosDados => addDados(novosDados)}/>}/>
       </Routes>
       

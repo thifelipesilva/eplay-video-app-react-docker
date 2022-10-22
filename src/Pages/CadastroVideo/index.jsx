@@ -11,6 +11,14 @@ const CadastroVideo = ({ enviarDados }) => {
     const[descricao, setDescricao] = useState('');
 
 
+    function trataUrl(string) {
+        const embed = 'embed/';
+        const stringErrada = 'watch?v='
+        const novaString = string.replace(stringErrada, embed);
+        return novaString;
+    }
+
+
     const submeter = event => {
         event.preventDefault();
 
@@ -47,7 +55,10 @@ const CadastroVideo = ({ enviarDados }) => {
                     <Campo 
                      id={"url"}
                      value={url}
-                     aoAlterar={url => setUrl(url)}
+                     aoAlterar={url => {
+                        const novaUrl = trataUrl(url);
+                        setUrl(novaUrl);
+                    }}
                     />
                 </Caixa>
                 <Caixa>

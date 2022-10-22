@@ -1,16 +1,15 @@
-import Video from "../../components/Video";
+import VideoPlayer from "../../components/VideoPlayer";
 import { Container, Paragrafo, Secao } from "./styles";
 
 const HomePage = () => {
     return(
         <Container>
             <Secao>
-                <Video
+                <VideoPlayer
                  width={"560"}
                  height={"315"} 
                  src={"https://www.youtube.com/embed/xzqBngxorUI?autoplay=1"} 
-                 title="Video de condução de fêmeas"               
-                
+                 title="Video de condução de fêmeas"    
                 />
             </Secao>
             <Secao>
