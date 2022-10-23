@@ -7,12 +7,19 @@ export const Container = styled.div`
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
+    @media(max-width: 780px) {
+       
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    };
 `;
 
 export const Alerta = styled.h2`
     position: relative;
-    left: 400px;
+    left: 90%;
     color: var(--verde);
-    text-align: center;
 
+    
 `;

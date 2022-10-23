@@ -1,20 +1,32 @@
+import React, { useState } from 'react';
 import Botao from "../Botao";
-
 import { 
+    BackGroundMenu,
     Container,
     Item,
-    Lista, 
+    Lista,
+    MenuIcon,
     Navegacao, 
     Titulo 
 } from "./styles";
 
 const Menu = () => {
+
+    const [click, setClick] = useState(false);
+
+    const abreFechaMenu = () => {
+        setClick(!click)
+        console.log('clicou');
+    }
+
     return(
 
         <Container>
             <Titulo>E-Play</Titulo>
+            
             <Navegacao>
-                <Lista>
+                
+                <Lista >
                     <Item to="/">
                         Home
                     </Item>
@@ -22,10 +34,15 @@ const Menu = () => {
                         Sala de Video
                     </Item>
                 </Lista>
+
+                <Botao nomeBotao={'Add Videos'}/>
+
             </Navegacao>
     
-            <Botao nomeBotao={'Add Videos'}/>
 
+            <MenuIcon onClick={abreFechaMenu}/>
+            <BackGroundMenu clicou={click}>&nbsp;</BackGroundMenu>
+            
         </Container>
     );
 }

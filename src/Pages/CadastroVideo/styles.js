@@ -4,6 +4,10 @@ export const Container = styled.div`
     margin-top: 64px;
     padding: 0 120px;
     height: auto;
+
+    @media (max-width: 620px) {
+        padding: 0 20px;
+    }
 `;
 
 export const Formulario = styled.form`
@@ -26,6 +30,10 @@ export const Caixa = styled.div`
     margin-top: 12px;
 
     width: 40%;
+
+    @media (max-width: 820px) {
+        width: 90%;
+    }
 `;
 
 export const BotaoCadastro = styled.button`
@@ -43,6 +51,12 @@ export const BotaoCadastro = styled.button`
     margin: 12px 0;
     
     padding: 12px;
+
+    @media (max-width: 820px) {
+        width: 90%;
+    }
+
+
 
     &:hover{ 
         color: var(--verde);

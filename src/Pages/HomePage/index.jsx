@@ -6,7 +6,7 @@ const HomePage = () => {
         <Container>
             <Secao>
                 <VideoPlayer
-                 width={"560"}
+                 
                  height={"315"} 
                  src={"https://www.youtube.com/embed/xzqBngxorUI?autoplay=1"} 
                  title="Video de condução de fêmeas"    

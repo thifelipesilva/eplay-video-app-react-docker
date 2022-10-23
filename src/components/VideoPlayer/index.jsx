@@ -3,7 +3,7 @@
 const VideoPlayer = ({ width, height, src, title }) => {
   return (
     <iframe
-      width={width}
+      width={width || "auto"}
       height={height}
       src={src}
       title={title}
